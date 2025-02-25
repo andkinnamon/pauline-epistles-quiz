@@ -32,7 +32,10 @@ const questions = {
     lecture11: [
         { question: "Outline of 1 Corinthians.", answer: "1 Corinthians:<ul><li>1:1-3 – Opening</li><li>1:4-9 – Thanksgiving</li><li>1:10-6:20 – Responses to Verbal Reports</li><li>7:1-16:4 – Responses to Letter</li><li>16:5-24 – Closing</li></ul>" }
     ],
-    lecture12: [],
+    lecture12: [
+        { question: "Identify the chapter: “Jews require a sign and Greeks seek wisdom, but we preach Christ crucified.”", answer: "1 Corinthians 1" },
+        { question: "Identify the chapter: “The man without the Spirit does not accept the things that come from the Spirit of God.”", answer: "1 Corinthians 2" }
+    ],
     lecture13: [],
     lecture14: [],
     lecture15: [],
