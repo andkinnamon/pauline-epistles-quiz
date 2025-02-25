@@ -4,6 +4,16 @@ body {
     scrollbar-width: none;
     overflow-y: scroll;
     padding-bottom: 1em;
+    background-color: white;
+    color: black;
+}
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #2a2a2a;
+        color: white;
+    }
 }
 
 #lecture-selection {
@@ -34,17 +44,21 @@ footer#update {
     text-align: right;
 }
 
+ul {
+    list-style-type: none; /* Remove default bullets */
+    margin: 0.5em 0;
+    padding-left: 0;
+    
+}
 
-ul, li {
+li {
+    position: relative;
+    padding-left: 2em;
     margin-bottom: 0.5em;
 }
 
-ul {
-    list-style-type: none; /* Remove default bullets */
-    margin-top: 0.5em;
-}
-
 ul li::before {
-    content: "– "; /* En dash with space */
-    font-weight: bold; /* Optional: make it more visible */
+    content: "– ";
+    position: absolute;
+    left: 0;
 }
