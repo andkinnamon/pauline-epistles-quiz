@@ -3,6 +3,7 @@ body {
     text-align: center;
     scrollbar-width: none;
     overflow-y: scroll;
+    padding-bottom: 1em;
 }
 
 #lecture-selection {
@@ -24,12 +25,15 @@ button {
     text-align: left;
 }
 
-#update {
-    font-size: 80%;
+footer#update {
     position: fixed;
-    bottom: 10px; /* Distance from the bottom */
-    right: 10px;  /* Distance from the right */
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    font-size: 80%;
+    text-align: right;
 }
+
 
 ul, li {
     margin-bottom: 0.5em;
@@ -37,6 +41,7 @@ ul, li {
 
 ul {
     list-style-type: none; /* Remove default bullets */
+    margin-top: 0.5em;
 }
 
 ul li::before {
