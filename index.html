@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Tool</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        table {
+            border-collapse: collapse;
+            margin: auto; /* Center the table */
+            margin-top: 0.5em;
+            border: 1px solid;
+        }
+        td {
+            padding: 2px 5px; /* Minimal padding */
+            text-align: center;
+        }
+        label {
+            font-size: 14px; /* Smaller font */
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            white-space: nowrap; /* Prevents wrapping */
+        }
+        input[type="checkbox"] {
+            transform: scale(0.9); /* Slightly smaller checkboxes */
+        }
+    </style>
+</head>
+<body>
+    <h1>Pauline Epistles Quiz Practice</h1>
+    
+    <div id="lecture-selection">
+        <h2>Select Lectures:</h2>
+        <div>
+            Only contains questions through lecture 9
+        </div>
+        <table>
+            <tbody id="lecture-table"></tbody>
+        </table>
+    </div>
+    
+    <div>
+        <button id="selectAll">(Un)Select All Lectures</button>
+    </div>
+
+    <button id="start">Start Quiz</button>
+    <button id="stop" disabled>Stop Quiz</button>
+
+    <div id="questionsBox">
+        <div id="questions"></div>
+    </div>
+    <div id="timer"></div>
+
+    <div id="answersBox">
+        <div id="answers"></div>
+    </div>
+    
+
+    <script>
+        const lectures = ["3", "3a"];
+        for (let i = 4; i <= 29; i++) {
+            lectures.push(i.toString());
+        }
+
+        const tableBody = document.getElementById("lecture-table");
+        let row;
+        lectures.forEach((lecture, index) => {
+            if (index % 5 === 0) {
+                row = document.createElement("tr");
+                tableBody.appendChild(row);
+            }
+            const cell = document.createElement("td");
+            cell.innerHTML = `<label><input type="checkbox" value="lecture${lecture}" checked> ${lecture}</label>`;
+            row.appendChild(cell);
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

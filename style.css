@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+#lecture-selection {
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px;
+    margin: 5px;
+}
+
+#questionsBox, #answersBox {
+    max-width: 30em;
+    align-items: center;
+    margin: auto;
+}
+
+#questions, #answers {
+    text-align: left;
+}
+
+ul, li {
+    margin-bottom: 0.5em;
+}
+
+ul {
+    list-style-type: none; /* Remove default bullets */
+}
+
+ul li::before {
+    content: "– "; /* En dash with space */
+    font-weight: bold; /* Optional: make it more visible */
+}
