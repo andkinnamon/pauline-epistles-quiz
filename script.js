@@ -19,13 +19,16 @@ const questions = {
         { question: "Outline of 1 Thessalonians.", answer: "1 Thessalonians:<ul><li>1:1 – Opening</li><li>1:2-10 – Thanksgiving</li><li>2:1-3:13 – Defense, Thanksgiving, Tim’s Mission</li><li>4:1-5:22 – Hortatory</li><li>5:23-28 – Closing</li></ul>" }
     ],
     lecture8: [
-        { question: "Identify the chapter, “You accepted it not as the word of men, but as it truly is, the word of God.”", answer: "1 Thessalonians 2" },
+        { question: "Identify the chapter: “You accepted it not as the word of men, but as it truly is, the word of God.”", answer: "1 Thessalonians 2" },
         { question: "Identify the chapter, “We will be caught up together with them in the clouds to meet the Lord.”", answer: "1 Thessalonians 4" }
     ],
     lecture9: [
         { question: "Outline of 2 Thessalonians.", answer: "2 Thessalonians:<ul><li>1:1-2 – Opening</li><li>1:3-12 – Thanksgiving</li><li>2:1-12 – Man of Lawlessness</li><li>2:13-3:5 – Thanksgiving and Prayer Request</li><li>3:6-15 – Idleness</li><li>3:16-18 – Closing</li></ul>" }
     ],
-    lecture10: [],
+    lecture10: [
+        { question: "Identify the chapter: “Man of lawlessness”", answer: "2 Thessalonians 2" },
+        { question: "Identify the chapter: “If a man will not work, he shall not eat.”", answer: "2 Thessalonians 3" }
+    ],
     lecture11: [],
     lecture12: [],
     lecture13: [],
