@@ -29,7 +29,9 @@ const questions = {
         { question: "Identify the chapter: “Man of lawlessness”", answer: "2 Thessalonians 2" },
         { question: "Identify the chapter: “If a man will not work, he shall not eat.”", answer: "2 Thessalonians 3" }
     ],
-    lecture11: [],
+    lecture11: [
+        { question: "Outline of 1 Corinthians.", answer: "1 Corinthians:<ul><li>1:1-3 – Opening</li><li>1:4-9 – Thanksgiving</li><li>1:10-6:20 – Responses to Verbal Reports</li><li>7:1-16:4 – Responses to Letter</li><li>16:5-24 – Closing</li></ul>" }
+    ],
     lecture12: [],
     lecture13: [],
     lecture14: [],
