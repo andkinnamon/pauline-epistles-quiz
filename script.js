@@ -64,6 +64,12 @@ document.getElementById("start").addEventListener("click", function () {
         return;
     }
 
+    // Clear previous question and answer lists
+    chosenQuestions = [];
+    chosenAnswers = [];
+    finalQuestions = [];
+    finalAnswers = [];
+    
     // Collect questions and corresponding answers
     selectedLectures.forEach(lecture => {
         if (questions[lecture]) {
