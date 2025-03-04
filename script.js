@@ -36,9 +36,20 @@ const questions = {
         { question: "Identify the chapter: “Jews require a sign and Greeks seek wisdom, but we preach Christ crucified.”", answer: "1 Corinthians 1" },
         { question: "Identify the chapter: “The man without the Spirit does not accept the things that come from the Spirit of God.”", answer: "1 Corinthians 2" }
     ],
-    lecture13: [],
-    lecture14: [],
-    lecture15: [],
+    lecture13: [
+        { question: "Identify the chapter: “Hand this man over to Satan.”", answer: "1 Corinthians 5" },
+        { question: "Identify the chapter: “Body is the temple of the Holy Spirit.”", answer: "1 Corinthians 6" }
+    ],
+    lecture14: [
+        { question: "Identify the chapter: “The unbelieving husband is sanctified through the wife.”", answer: "1 Corinthians 7" },
+        { question: "Identify the chapter: “The rock was Christ.”", answer: "1 Corinthians 10" },
+        { question: "Identify the chapter: “God is faithful, he will not let you be tempted beyond what you can bear.”", answer: "1 Corinthians 10" }
+    ],
+    lecture15: [
+        { question: "Identify the chapter: “This cup is the new covenant in my blood.”", answer: "1 Corinthians 11" },
+        { question: "Identify the chapter: “God has appointed first of all Apostles, second prophets...”", answer: "1 Corinthians 12" },
+        { question: "Identify the chapter: “Where O death is your sting?”", answer: "1 Corinthians 15" }
+    ],
     lecture16: [],
     lecture17: [],
     lecture18: [],
