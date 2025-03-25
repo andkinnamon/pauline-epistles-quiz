@@ -1,3 +1,32 @@
+document.addEventListener("DOMContentLoaded", function () {
+    const toggleSwitch = document.getElementById("toggle-darkmode");
+  
+    // Function to check system's dark mode preference
+    const isSystemDarkMode = () => window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+  
+    // Function to update the dark mode based on the user's preference
+    const updateDarkMode = (isDark) => {
+      if (isDark) {
+        document.body.classList.add("dark-mode");
+      } else {
+        document.body.classList.remove("dark-mode");
+      }
+    };
+
+    if (isSystemDarkMode) {
+        document.body.classList.add("dark-mode");
+        toggleSwitch.checked = true;
+    }
+
+    // Event listener to toggle dark mode when switch is clicked
+    toggleSwitch.addEventListener("change", function () {
+      const isDark = toggleSwitch.checked;
+      updateDarkMode(isDark);
+      localStorage.setItem("darkMode", isDark); // Save user preference
+    });
+  });
+  
+
 const questions = {
     lecture3: [
         { question: "List the Pauline Epistles in Chronological order.", answer: "Pauline Epistles (Chronological):<ul><li>Galatians</li><li>1 & 2 Thessalonians</li><li>1 & 2 Corinthians</li><li>Romans</li><li>Ephesians, Philippians, Colossians, Philemon</li><li>1 Timothy, Titus</li><li>2 Timothy</li></ul>", type: "outline" }
