@@ -20,6 +20,46 @@ button.dark-mode {
     border: 1px solid white;
 }
 
+header {
+    border-bottom: solid 2px;
+}
+
+/* Parent container for both sidebar and main content */
+.container {
+    display: flex;
+    min-height: 100vh; /* Ensures the layout stretches to the full height of the page */
+}
+  
+/* Sidebar (settings) */
+.sidebar {
+    width: 250px; /* Width of the sidebar */
+    padding: 20px; /* Add some padding */
+    border-right: solid 1px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for visual separation */
+}
+  
+/* Main content area (quiz) */
+.main-content {
+    flex-grow: 1; /* Takes the remaining space */
+    padding: 20px; /* Padding for the content */
+}
+  
+/* Optional: Add some responsive styles for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack the sidebar and content vertically on small screens */
+    }
+  
+    .sidebar {
+        width: 100%; /* Sidebar takes full width on smaller screens */
+        box-shadow: none; /* Remove shadow for smaller screens */
+    }
+  
+    .main-content {
+        width: 100%; /* Main content takes full width on smaller screens */
+    }
+}
+  
 
 #lecture-selection {
     margin-bottom: 20px;
@@ -39,7 +79,7 @@ button {
 }
 
 #questionsBox, #answersBox {
-    max-width: 30em;
+    max-width: 40em;
     align-items: center;
     margin: auto;
 }
