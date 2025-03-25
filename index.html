@@ -40,9 +40,14 @@
             <tbody id="lecture-table"></tbody>
         </table>
     </div>
-    
+
     <div>
         <button id="selectAll">(Un)Select All Lectures</button>
+    </div>
+
+    <div id="type-selection">
+        <label><input type="checkbox" id="filterOutline" checked>Outlines</label>
+        <label><input type="checkbox" id="filterChapter" checked>Chapters</label>
     </div>
 
     <button id="start">Start Quiz</button>
@@ -72,13 +77,13 @@
                 tableBody.appendChild(row);
             }
             const cell = document.createElement("td");
-            cell.innerHTML = `<label><input type="checkbox" value="lecture${lecture}" checked> ${lecture}</label>`;
+            cell.innerHTML = `<label><input type="checkbox" class="lecture-checkbox" value="lecture${lecture}" checked> ${lecture}</label>`;
             row.appendChild(cell);
         });
     </script>
     <script src="script.js"></script>
 </body>
 <footer id="update">
-    Version: 1.0.10 (Updated Mar 25, 2025)
+    Version: 1.1.0 (Updated Mar 25, 2025)
 </footer>
 </html>

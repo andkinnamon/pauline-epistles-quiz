@@ -84,11 +84,19 @@ let finalQuestions;
 let finalAnswers;
 
 document.getElementById("start").addEventListener("click", function () {
-    const selectedLectures = [...document.querySelectorAll('input[type="checkbox"]:checked')]
+    const selectedLectures = [...document.querySelectorAll('.lecture-checkbox:checked')]
         .map(checkbox => checkbox.value);
 
     if (selectedLectures.length === 0) {
         alert("Select at least one lecture!");
+        return;
+    }
+
+    const includeOutlines = document.getElementById("filterOutline").checked;
+    const includeChapters = document.getElementById("filterChapter").checked;
+
+    if (!includeOutlines && !includeChapters) {
+        alert("You must select at least one question type (Outlines or Chapters).");
         return;
     }
 
@@ -97,19 +105,30 @@ document.getElementById("start").addEventListener("click", function () {
     chosenAnswers = [];
     finalQuestions = [];
     finalAnswers = [];
-    
-    // Collect questions and corresponding answers
+
+    // Collect questions based on selected filters
     selectedLectures.forEach(lecture => {
         if (questions[lecture]) {
-            questions[lecture].forEach((q, index) => {
-                chosenQuestions.push(q["question"]);
-                chosenAnswers.push(q["answer"]);
+            questions[lecture].forEach(q => {
+                if ((includeOutlines && q["type"] === "outline") || 
+                    (includeChapters && q["type"] === "chapter")) {
+                    chosenQuestions.push(q["question"]);
+                    chosenAnswers.push(q["answer"]);
+                }
             });
         }
     });
 
+    if (chosenQuestions.length === 0) {
+        alert("No questions match the selected filters. Try adjusting your selections.");
+        return;
+    }
+
     // Randomly select up to 3 questions
-    const selectedIndices = [...Array(chosenQuestions.length).keys()].sort(() => Math.random() - 0.5).slice(0, 3);
+    const selectedIndices = [...Array(chosenQuestions.length).keys()]
+        .sort(() => Math.random() - 0.5)
+        .slice(0, 3);
+    
     finalQuestions = selectedIndices.map(i => chosenQuestions[i]);
     finalAnswers = selectedIndices.map(i => chosenAnswers[i]);
 
@@ -167,7 +186,7 @@ document.getElementById("stop").addEventListener("click", function () {
 
 
 document.getElementById("selectAll").addEventListener("click", function() {
-    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    const checkboxes = document.querySelectorAll('.lecture-checkbox'); // Select only lecture checkboxes
     const allChecked = [...checkboxes].every(checkbox => checkbox.checked); // Check if all are already checked
 
     checkboxes.forEach(checkbox => checkbox.checked = !allChecked); // Toggle state
