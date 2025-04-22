@@ -36,9 +36,6 @@
         <div class="sidebar">  
             <div id="lecture-selection">
                 <h2>Select Lectures:</h2>
-                <div>
-                    Only contains questions through lecture 17
-                </div>
                 <table>
                     <tbody id="lecture-table"></tbody>
                 </table>
@@ -72,7 +69,11 @@
 
     <script>
         const lectures = ["3", "3a"];
-        for (let i = 4; i <= 29; i++) {
+        for (let i = 4; i <= 23; i++) {
+            lectures.push(i.toString());
+        }
+        lectures.push("23a")
+        for (let i = 24; i <= 29; i++) {
             lectures.push(i.toString());
         }
 
@@ -101,6 +102,6 @@
     
         <img src="images/moon.svg" alt="Moon Icon" class="moon-icon">
     </div>  
-    <div id="update">Version: 1.3.2 (Updated April 2, 2025)</div>
+    <div id="update">Version: 1.3.3 (Updated April 22, 2025)</div>
 </footer>
 </html>
